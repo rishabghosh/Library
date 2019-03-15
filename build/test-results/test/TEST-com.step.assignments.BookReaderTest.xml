@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.step.assignments.BookReaderTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2019-03-15T12:25:48" hostname="in-Rishabgh.local" time="0.012">
+  <properties/>
+  <testcase name="searchBook1()" classname="com.step.assignments.BookReaderTest" time="0.008"/>
+  <testcase name="hasBorrowed2()" classname="com.step.assignments.BookReaderTest" time="0.001"/>
+  <testcase name="borrowBooks()" classname="com.step.assignments.BookReaderTest" time="0.0"/>
+  <testcase name="hasBorrowed()" classname="com.step.assignments.BookReaderTest" time="0.0"/>
+  <testcase name="returnBook()" classname="com.step.assignments.BookReaderTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -25,11 +25,6 @@ class BookReaderTest {
 
     @BeforeEach
     void setup() {
-        library = new Library();
-        library.addNewBook(book1);
-        library.addNewBook(book2);
-        library.addNewBook(book3);
-
         reader = new BookReader("John");
         reader.borrowBook(book4);
         reader.borrowBook(book5);
