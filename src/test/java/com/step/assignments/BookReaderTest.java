@@ -20,8 +20,6 @@ class BookReaderTest {
     private final Book book5 = new Book("Kite Runner", 1234570L);
 
     private BookReader reader;
-    private Library library;
-
 
     @BeforeEach
     void setup() {

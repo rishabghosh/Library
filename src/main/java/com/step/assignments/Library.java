@@ -14,8 +14,10 @@ public class Library {
     private final Map<BookReader, Set<Book>> readersRegister = new HashMap<>();
     private final Map<Book, BookReader> bookRegister = new HashMap<>();
 
-    public Library(Set<Book> books) {
+    public Library(Set<Book> books, Set<BookReader> bookReaders) {
         this.books.addAll(books);
+        this.bookReaders.addAll(bookReaders);
+        registerAllReaders(bookReaders);
     }
 
     //library should have methods like
@@ -24,6 +26,12 @@ public class Library {
 
 
     /* ============= Internal Methods ============== */
+
+    private void registerAllReaders(Set<BookReader> bookReaders){
+        for (BookReader bookReader : bookReaders) {
+            this.registerNewReader(bookReader);
+        }
+    }
 
     private boolean isSameBook(Book book, String nameOfBook) {
         return book.getName().equals(nameOfBook);
@@ -55,9 +63,8 @@ public class Library {
         return false;
     }
 
-    private void addInReadersRegister(BookReader reader, Book book){
+    private void addBookInReadersRegister(BookReader reader, Book book){
         Set<Book> booksOfReader = this.readersRegister.get(reader);
-        System.out.println(booksOfReader);
         booksOfReader.add(book);
     }
 
@@ -65,9 +72,13 @@ public class Library {
         this.removedBooks.remove(book);
     }
 
-    private void removeFromReadersRegister(BookReader reader, Book book) {
+    private void removeBookFromReadersRegister(BookReader reader, Book book) {
         Set<Book> booksOfReader = this.readersRegister.get(reader);
         booksOfReader.remove(book);
+    }
+
+    private void registerNewReader(BookReader reader){
+        this.readersRegister.put(reader, new HashSet<>());
     }
 
     /* ========= Methods For Reader ========== */
@@ -75,13 +86,13 @@ public class Library {
 
     public void giveBookToReader(BookReader reader, Book book){
         this.books.remove(book);
-        addInReadersRegister(reader, book);
+        addBookInReadersRegister(reader, book);
         reader.borrowBook(book);
     }
 
     public void takeBookFromReader(BookReader reader, Book book) {
         reader.returnBook(book);
-        removeFromReadersRegister(reader, book);
+        removeBookFromReadersRegister(reader, book);
         this.addNewBook(book);
     }
 
@@ -95,7 +106,7 @@ public class Library {
 
     public void addReader(BookReader reader) {
         this.bookReaders.add(reader);
-        this.readersRegister.put(reader, new HashSet<>());
+        this.registerNewReader(reader);
     }
 
     public Set<BookReader> getBookReaders() {
@@ -106,6 +117,14 @@ public class Library {
         return new HashSet<>(this.removedBooks);
     }
 
+    public Map<BookReader, Set<Book>> getReadersRegister() {
+        return new HashMap<>(this.readersRegister);
+    }
+
+    public Set<Book> getBooksOfReader(BookReader reader){
+        Set<Book> books = this.readersRegister.get(reader);
+        return new HashSet<>(books);
+    }
 
     /* =========== Librarian =========== */
 
