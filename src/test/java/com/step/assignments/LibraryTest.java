@@ -194,5 +194,23 @@ class LibraryTest {
         assertTrue(expected.containsAll(actual) && actual.containsAll(expected));
     }
 
+    @Test
+    @DisplayName("should return true if the book was removed in the past")
+    void wasBookRemoved(){
+        Library.Librarian librarian = library.getLibrarian();
+        librarian.removeBookFromLibrary(book1);
 
+        assertTrue(librarian.wasBookRemoved(book1));
+    }
+
+    @Test
+    @DisplayName("should return false if the book was not removed in the past")
+    void wasBookRemoved2(){
+        Book mazeRunner = new Book("MazeRunner", 1234571L);
+
+        Library.Librarian librarian = library.getLibrarian();
+        librarian.removeBookFromLibrary(mazeRunner);
+
+        assertFalse(librarian.wasBookRemoved(book1));
+    }
 }

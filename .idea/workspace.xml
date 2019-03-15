@@ -30,8 +30,9 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/step/assignments/Library.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="167" column="8" selection-start-line="167" selection-start-column="8" selection-end-line="167" selection-end-column="8" />
+            <state relative-caret-position="577">
+              <caret line="136" column="37" selection-start-line="136" selection-start-column="37" selection-end-line="136" selection-end-column="37" />
+              <caret line="157" column="30" selection-start-line="157" selection-start-column="30" selection-end-line="157" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#872#873#0" expanded="true" />
@@ -50,9 +51,11 @@
                 <element signature="e#3437#3438#0" expanded="true" />
                 <element signature="e#3489#3490#0" expanded="true" />
                 <element signature="e#3735#3736#0" expanded="true" />
-                <element signature="e#3924#3925#0" expanded="true" />
+                <element signature="e#3852#3853#0" expanded="true" />
+                <element signature="e#3915#3916#0" expanded="true" />
                 <element signature="e#4730#4731#0" expanded="true" />
-                <element signature="e#4866#4867#0" expanded="true" />
+                <element signature="e#4770#4771#0" expanded="true" />
+                <element signature="e#4868#4869#0" expanded="true" />
                 <element signature="e#4910#4911#0" expanded="true" />
                 <element signature="e#4966#4967#0" expanded="true" />
               </folding>
@@ -63,8 +66,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/step/assignments/LibraryTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="192" column="62" selection-start-line="192" selection-start-column="62" selection-end-line="192" selection-end-column="62" />
+            <state relative-caret-position="451">
+              <caret line="202" column="19" selection-start-line="202" selection-start-column="19" selection-end-line="202" selection-end-column="19" />
               <folding>
                 <element signature="method#giveBookToReader#1;class#LibraryTest#0" />
                 <element signature="e#2257#2262#0" />
@@ -201,7 +204,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552674164433" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552674580487" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -232,39 +235,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LibraryTest.removeBookFromLibrary2">
-    <configuration name="LibraryTest.getAllBooksOfReader2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="library-simulation.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.step.assignments.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.step.assignments" />
-      <option name="MAIN_CLASS_NAME" value="com.step.assignments.LibraryTest" />
-      <option name="METHOD_NAME" value="getAllBooksOfReader2" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LibraryTest.getAllBooksOfReader3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="library-simulation.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.step.assignments.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.step.assignments" />
-      <option name="MAIN_CLASS_NAME" value="com.step.assignments.LibraryTest" />
-      <option name="METHOD_NAME" value="getAllBooksOfReader3" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.LibraryTest.wasBookRemoved2">
     <configuration name="LibraryTest.removeBookFromLibrary" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="library-simulation.test" />
       <extension name="coverage">
@@ -297,6 +268,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LibraryTest.wasBookRemoved" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="library-simulation.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.step.assignments.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.step.assignments" />
+      <option name="MAIN_CLASS_NAME" value="com.step.assignments.LibraryTest" />
+      <option name="METHOD_NAME" value="wasBookRemoved" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LibraryTest.wasBookRemoved2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="library-simulation.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.step.assignments.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.step.assignments" />
+      <option name="MAIN_CLASS_NAME" value="com.step.assignments.LibraryTest" />
+      <option name="METHOD_NAME" value="wasBookRemoved2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="com.step.assignments in library-simulation.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="library-simulation.test" />
       <extension name="coverage">
@@ -313,11 +316,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LibraryTest.wasBookRemoved2" />
+        <item itemvalue="JUnit.LibraryTest.wasBookRemoved" />
         <item itemvalue="JUnit.LibraryTest.removeBookFromLibrary2" />
         <item itemvalue="JUnit.LibraryTest.removeBookFromLibrary" />
         <item itemvalue="JUnit.com.step.assignments in library-simulation.test" />
-        <item itemvalue="JUnit.LibraryTest.getAllBooksOfReader3" />
-        <item itemvalue="JUnit.LibraryTest.getAllBooksOfReader2" />
       </list>
     </recent_temporary>
   </component>
@@ -335,9 +338,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LibraryTest_getCurrentReaderOf - 2019.03.15 at 23h 31m 49s.xml">
-      <configuration name="LibraryTest.getCurrentReaderOf" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="LibraryTest_getCurrentReaderOf2 - 2019.03.15 at 23h 33m 38s.xml">
       <configuration name="LibraryTest.getCurrentReaderOf2" configurationId="JUnit" />
     </history-entry>
@@ -365,6 +365,9 @@
     <history-entry file="LibraryTest_removeBookFromLibrary - 2019.03.15 at 23h 51m 37s.xml">
       <configuration name="LibraryTest.removeBookFromLibrary" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="LibraryTest_removeBookFromLibrary2 - 2019.03.15 at 23h 52m 46s.xml">
+      <configuration name="LibraryTest.removeBookFromLibrary2" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="0" />
@@ -379,7 +382,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32656023" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32656023" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -476,8 +479,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/step/assignments/Library.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="167" column="8" selection-start-line="167" selection-start-column="8" selection-end-line="167" selection-end-column="8" />
+        <state relative-caret-position="577">
+          <caret line="136" column="37" selection-start-line="136" selection-start-column="37" selection-end-line="136" selection-end-column="37" />
+          <caret line="157" column="30" selection-start-line="157" selection-start-column="30" selection-end-line="157" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#872#873#0" expanded="true" />
@@ -496,9 +500,11 @@
             <element signature="e#3437#3438#0" expanded="true" />
             <element signature="e#3489#3490#0" expanded="true" />
             <element signature="e#3735#3736#0" expanded="true" />
-            <element signature="e#3924#3925#0" expanded="true" />
+            <element signature="e#3852#3853#0" expanded="true" />
+            <element signature="e#3915#3916#0" expanded="true" />
             <element signature="e#4730#4731#0" expanded="true" />
-            <element signature="e#4866#4867#0" expanded="true" />
+            <element signature="e#4770#4771#0" expanded="true" />
+            <element signature="e#4868#4869#0" expanded="true" />
             <element signature="e#4910#4911#0" expanded="true" />
             <element signature="e#4966#4967#0" expanded="true" />
           </folding>
@@ -507,8 +513,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/step/assignments/LibraryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="192" column="62" selection-start-line="192" selection-start-column="62" selection-end-line="192" selection-end-column="62" />
+        <state relative-caret-position="451">
+          <caret line="202" column="19" selection-start-line="202" selection-start-column="19" selection-end-line="202" selection-end-column="19" />
           <folding>
             <element signature="method#giveBookToReader#1;class#LibraryTest#0" />
             <element signature="e#2257#2262#0" />

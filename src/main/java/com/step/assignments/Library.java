@@ -134,7 +134,7 @@ public class Library {
 
 
     public class Librarian {
-        public boolean isBookRemoved(Book book) {
+        public boolean wasBookRemoved(Book book) {
             return getRemovedBooks().contains(book);
         }
 
@@ -155,7 +155,7 @@ public class Library {
         }
 
         public void bringBack(Book book) {
-            if (isBookRemoved(book)) {
+            if (wasBookRemoved(book)) {
                 removePermanently(book);
                 addNewBook(book);
                 return;
