@@ -54,15 +54,6 @@ public class Library {
         System.out.printf("Book %s does not exist", book.getName());
     }
 
-    private boolean searchByName(String nameOfBook) {
-        for (Book book : this.books) {
-            if (isSameBook(book, nameOfBook)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
     private void addBookInReadersRegister(BookReader reader, Book book){
         Set<Book> booksOfReader = this.readersRegister.get(reader);
         booksOfReader.add(book);
@@ -96,6 +87,15 @@ public class Library {
         this.addNewBook(book);
     }
 
+    public Book getBookByName(String nameOfBook) {
+        for (Book book : this.books) {
+            if (isSameBook(book, nameOfBook)) {
+                return book;
+            }
+        }
+        return null;
+    }
+
 
     /* ======= Methods For Testing ======= */
 
@@ -125,6 +125,8 @@ public class Library {
         Set<Book> books = this.readersRegister.get(reader);
         return new HashSet<>(books);
     }
+
+
 
     /* =========== Librarian =========== */
 

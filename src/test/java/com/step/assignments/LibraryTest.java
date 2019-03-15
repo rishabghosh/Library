@@ -10,8 +10,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 class LibraryTest {
     private final Book book1 = new Book("Harry Potter", 1123456L);
@@ -32,6 +31,8 @@ class LibraryTest {
         readers = new HashSet<>(Arrays.asList(john, kane));
         library = new Library(books, readers);
     }
+
+    /* ========= giveBookToReader =========== */
 
     @Test
     @DisplayName("should remove the book from main book list")
@@ -67,6 +68,7 @@ class LibraryTest {
      * Also should use mocks to know reader.borrowBooks is called or not
      */
 
+    /* ============= takeBookFromReader ============== */
 
     @Test
     @DisplayName("should add book to the list of books")
@@ -87,6 +89,7 @@ class LibraryTest {
 
         Set<Book> actual = library.getBooksOfReader(kane);
         Set<Book> expected = new HashSet<>(Arrays.asList());
+        //also can use actual.isEmpty()
         assertTrue(expected.containsAll(actual) && actual.containsAll(expected));
     }
 
@@ -94,6 +97,23 @@ class LibraryTest {
      * Also use mockers to check if reader.return book was called or not
      */
 
+    /* ========== getBookByName ========== */
 
-    
+    @Test
+    @DisplayName("should return the book if its available")
+    void getBookByName(){
+        String nameOfBook = "Harry Potter";
+        Book book = library.getBookByName(nameOfBook);
+        assertEquals(nameOfBook, book.getName());
+    }
+
+    @Test
+    @DisplayName("should return null if its not available")
+    void getBookByName2(){
+        String nameOfBook = "Bad Book";
+        Book book = library.getBookByName(nameOfBook);
+        assertNull(book);
+    }
+
+
 }

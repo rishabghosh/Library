@@ -4,7 +4,6 @@
     <list default="true" id="1aeb6217-e368-4593-b2ee-0679b10eabad" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/step/assignments/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/step/assignments/Library.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/step/assignments/BookReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/step/assignments/BookReaderTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/step/assignments/LibraryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/step/assignments/LibraryTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -31,8 +30,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/step/assignments/Library.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1003">
-              <caret line="125" column="19" selection-start-line="125" selection-start-column="19" selection-end-line="125" selection-end-column="19" />
+            <state relative-caret-position="361">
+              <caret line="92" column="19" lean-forward="true" selection-start-line="92" selection-start-column="19" selection-end-line="92" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#872#873#0" expanded="true" />
@@ -45,13 +44,12 @@
                 <element signature="e#1855#1856#0" expanded="true" />
                 <element signature="e#2190#2191#0" expanded="true" />
                 <element signature="e#2255#2256#0" expanded="true" />
-                <element signature="e#3045#3046#0" expanded="true" />
-                <element signature="e#3278#3279#0" expanded="true" />
+                <element signature="e#3041#3042#0" expanded="true" />
+                <element signature="e#3274#3275#0" expanded="true" />
                 <element signature="e#2479#2480#0" expanded="true" />
                 <element signature="e#2534#2535#0" expanded="true" />
                 <element signature="e#3437#3438#0" expanded="true" />
                 <element signature="e#3489#3490#0" expanded="true" />
-                <element signature="class#Librarian#0;class#Library#0" />
                 <element signature="e#2472#2473#0" expanded="true" />
                 <element signature="e#2535#2536#0" expanded="true" />
                 <element signature="e#2863#2864#0" expanded="true" />
@@ -68,8 +66,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/step/assignments/LibraryTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="88" column="62" selection-start-line="88" selection-start-column="62" selection-end-line="88" selection-end-column="62" />
+            <state relative-caret-position="386">
+              <caret line="104" column="47" selection-start-line="104" selection-start-column="47" selection-end-line="104" selection-end-column="47" />
               <folding>
                 <element signature="method#giveBookToReader#1;class#LibraryTest#0" />
                 <element signature="e#2257#2262#0" />
@@ -104,6 +102,7 @@
       <find>removeBookFromLib</find>
       <find>addReader</find>
       <find>System</find>
+      <find>search</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -203,7 +202,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552670599295" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552672270540" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -234,8 +233,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LibraryTest.takeBookFromReader2">
-    <configuration name="LibraryTest.giveBookToReader" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.LibraryTest.getBookByName2">
+    <configuration name="LibraryTest.getBookByName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="library-simulation.test" />
       <extension name="coverage">
         <pattern>
@@ -245,13 +244,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.step.assignments" />
       <option name="MAIN_CLASS_NAME" value="com.step.assignments.LibraryTest" />
-      <option name="METHOD_NAME" value="giveBookToReader" />
+      <option name="METHOD_NAME" value="getBookByName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LibraryTest.giveBookToReader2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LibraryTest.getBookByName2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="library-simulation.test" />
       <extension name="coverage">
         <pattern>
@@ -261,23 +260,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.step.assignments" />
       <option name="MAIN_CLASS_NAME" value="com.step.assignments.LibraryTest" />
-      <option name="METHOD_NAME" value="giveBookToReader2" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LibraryTest.giveBookToReader3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="library-simulation.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.step.assignments.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.step.assignments" />
-      <option name="MAIN_CLASS_NAME" value="com.step.assignments.LibraryTest" />
-      <option name="METHOD_NAME" value="giveBookToReader3" />
+      <option name="METHOD_NAME" value="getBookByName2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -315,13 +298,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="com.step.assignments in library-simulation.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="library-simulation.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.step.assignments.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.step.assignments" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LibraryTest.getBookByName2" />
+        <item itemvalue="JUnit.LibraryTest.getBookByName" />
+        <item itemvalue="JUnit.com.step.assignments in library-simulation.test" />
         <item itemvalue="JUnit.LibraryTest.takeBookFromReader2" />
         <item itemvalue="JUnit.LibraryTest.takeBookFromReader" />
-        <item itemvalue="JUnit.LibraryTest.giveBookToReader3" />
-        <item itemvalue="JUnit.LibraryTest.giveBookToReader2" />
-        <item itemvalue="JUnit.LibraryTest.giveBookToReader" />
       </list>
     </recent_temporary>
   </component>
@@ -339,18 +336,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LibraryTest - 2019.03.15 at 22h 34m 57s.xml">
-      <configuration name="LibraryTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="com_step_assignments_in_library-simulation_test - 2019.03.15 at 22h 35m 04s.xml">
-      <configuration name="com.step.assignments in library-simulation.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LibraryTest_giveBookToReader2 - 2019.03.15 at 22h 37m 46s.xml">
-      <configuration name="LibraryTest.giveBookToReader2" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LibraryTest_giveBookToReader3 - 2019.03.15 at 22h 44m 23s.xml">
-      <configuration name="LibraryTest.giveBookToReader3" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="LibraryTest_giveBookToReader3 - 2019.03.15 at 22h 44m 30s.xml">
       <configuration name="LibraryTest.giveBookToReader3" configurationId="JUnit" />
     </history-entry>
@@ -369,6 +354,18 @@
     <history-entry file="LibraryTest_takeBookFromReader2 - 2019.03.15 at 22h 53m 09s.xml">
       <configuration name="LibraryTest.takeBookFromReader2" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="LibraryTest_takeBookFromReader2 - 2019.03.15 at 22h 53m 16s.xml">
+      <configuration name="LibraryTest.takeBookFromReader2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LibraryTest_takeBookFromReader2 - 2019.03.15 at 22h 53m 21s.xml">
+      <configuration name="LibraryTest.takeBookFromReader2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="com_step_assignments_in_library-simulation_test - 2019.03.15 at 22h 57m 38s.xml">
+      <configuration name="com.step.assignments in library-simulation.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LibraryTest_getBookByName - 2019.03.15 at 23h 18m 23s.xml">
+      <configuration name="LibraryTest.getBookByName" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="0" />
@@ -383,7 +380,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32656023" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32656023" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -480,8 +477,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/step/assignments/Library.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="125" column="19" selection-start-line="125" selection-start-column="19" selection-end-line="125" selection-end-column="19" />
+        <state relative-caret-position="361">
+          <caret line="92" column="19" lean-forward="true" selection-start-line="92" selection-start-column="19" selection-end-line="92" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#872#873#0" expanded="true" />
@@ -494,13 +491,12 @@
             <element signature="e#1855#1856#0" expanded="true" />
             <element signature="e#2190#2191#0" expanded="true" />
             <element signature="e#2255#2256#0" expanded="true" />
-            <element signature="e#3045#3046#0" expanded="true" />
-            <element signature="e#3278#3279#0" expanded="true" />
+            <element signature="e#3041#3042#0" expanded="true" />
+            <element signature="e#3274#3275#0" expanded="true" />
             <element signature="e#2479#2480#0" expanded="true" />
             <element signature="e#2534#2535#0" expanded="true" />
             <element signature="e#3437#3438#0" expanded="true" />
             <element signature="e#3489#3490#0" expanded="true" />
-            <element signature="class#Librarian#0;class#Library#0" />
             <element signature="e#2472#2473#0" expanded="true" />
             <element signature="e#2535#2536#0" expanded="true" />
             <element signature="e#2863#2864#0" expanded="true" />
@@ -515,8 +511,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/step/assignments/LibraryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="88" column="62" selection-start-line="88" selection-start-column="62" selection-end-line="88" selection-end-column="62" />
+        <state relative-caret-position="386">
+          <caret line="104" column="47" selection-start-line="104" selection-start-column="47" selection-end-line="104" selection-end-column="47" />
           <folding>
             <element signature="method#giveBookToReader#1;class#LibraryTest#0" />
             <element signature="e#2257#2262#0" />
