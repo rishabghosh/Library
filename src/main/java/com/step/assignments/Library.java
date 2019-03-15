@@ -27,7 +27,7 @@ public class Library {
 
     /* ============= Internal Methods ============== */
 
-    private void registerAllReaders(Set<BookReader> bookReaders){
+    private void registerAllReaders(Set<BookReader> bookReaders) {
         for (BookReader bookReader : bookReaders) {
             this.registerNewReader(bookReader);
         }
@@ -54,7 +54,7 @@ public class Library {
         System.out.printf("Book %s does not exist", book.getName());
     }
 
-    private void addBookInReadersRegister(BookReader reader, Book book){
+    private void addBookInReadersRegister(BookReader reader, Book book) {
         Set<Book> booksOfReader = this.readersRegister.get(reader);
         booksOfReader.add(book);
     }
@@ -68,14 +68,14 @@ public class Library {
         booksOfReader.remove(book);
     }
 
-    private void registerNewReader(BookReader reader){
+    private void registerNewReader(BookReader reader) {
         this.readersRegister.put(reader, new HashSet<>());
     }
 
     /* ========= Methods For Reader ========== */
 
 
-    public void giveBookToReader(BookReader reader, Book book){
+    public void giveBookToReader(BookReader reader, Book book) {
         this.books.remove(book);
         addBookInReadersRegister(reader, book);
         reader.borrowBook(book);
@@ -121,36 +121,41 @@ public class Library {
         return new HashMap<>(this.readersRegister);
     }
 
-    public Set<Book> getBooksOfReader(BookReader reader){
+    public Set<Book> getBooksOfReader(BookReader reader) {
         Set<Book> books = this.readersRegister.get(reader);
         return new HashSet<>(books);
     }
 
-
+    public Librarian getLibrarian() {
+        return new Librarian();
+    }
 
     /* =========== Librarian =========== */
 
 
-    private class Librarian{
-        public boolean isBookRemoved(Book book){
+    public class Librarian {
+        public boolean isBookRemoved(Book book) {
             return getRemovedBooks().contains(book);
         }
 
-        public BookReader getCurrentReaderOf(Book book){
-            for (BookReader reader: getBookReaders()) {
-                if(reader.hasBorrowed(book)){
+        public BookReader getCurrentReaderOf(Book book) {
+            for (BookReader reader : getBookReaders()) {
+                if (reader.hasBorrowed(book)) {
                     return reader;
                 }
             }
             return null;
         }
 
-        public Set<Book> getAllBooksOfReader(BookReader reader){
-            return reader.getBorrowedBooks();
+        public Set<Book> getAllBooksOfReader(BookReader reader) {
+            if (isReaderRegistered(reader)) {
+                return reader.getBorrowedBooks();
+            }
+            return null;
         }
 
-        public void bringBack(Book book){
-            if(isBookRemoved(book)){
+        public void bringBack(Book book) {
+            if (isBookRemoved(book)) {
                 removePermanently(book);
                 addNewBook(book);
                 return;
@@ -165,5 +170,9 @@ public class Library {
         public void removeBookFromLibrary(Book book) {
             removeBook(book);
         }
+    }
+
+    private boolean isReaderRegistered(BookReader reader) {
+        return this.bookReaders.contains(reader);
     }
 }

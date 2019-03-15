@@ -69,7 +69,6 @@ class LibraryTest {
      */
 
     /* ============= takeBookFromReader ============== */
-
     @Test
     @DisplayName("should add book to the list of books")
     void takeBookFromReader() {
@@ -83,7 +82,7 @@ class LibraryTest {
 
     @Test
     @DisplayName("should remove book against the reader in readers register")
-    void takeBookFromReader2(){
+    void takeBookFromReader2() {
         library.giveBookToReader(john, book1);
         library.takeBookFromReader(john, book1);
 
@@ -98,10 +97,9 @@ class LibraryTest {
      */
 
     /* ========== getBookByName ========== */
-
     @Test
     @DisplayName("should return the book if its available")
-    void getBookByName(){
+    void getBookByName() {
         String nameOfBook = "Harry Potter";
         Book book = library.getBookByName(nameOfBook);
         assertEquals(nameOfBook, book.getName());
@@ -109,10 +107,91 @@ class LibraryTest {
 
     @Test
     @DisplayName("should return null if its not available")
-    void getBookByName2(){
+    void getBookByName2() {
         String nameOfBook = "Bad Book";
         Book book = library.getBookByName(nameOfBook);
         assertNull(book);
+    }
+
+    /* ======== Librarian - getCurrentReaderOfBook ========= */
+
+    @Test
+    @DisplayName("should return the reader if he has borrowed the book")
+    void getCurrentReaderOf() {
+        library.giveBookToReader(john, book1);
+        Library.Librarian librarian = library.getLibrarian();
+        BookReader actual = librarian.getCurrentReaderOf(book1);
+        assertEquals(john, actual);
+    }
+
+    @Test
+    @DisplayName("should return null if the has not borrowed the book")
+    void getCurrentReaderOf2() {
+        Library.Librarian librarian = library.getLibrarian();
+        BookReader currentReader = librarian.getCurrentReaderOf(book1);
+        assertNull(currentReader);
+    }
+
+    @Test
+    @DisplayName("should return all the books of reader")
+    void getAllBooksOfReader() {
+        library.giveBookToReader(john, book1);
+        library.giveBookToReader(john, book2);
+        Library.Librarian librarian = library.getLibrarian();
+        Set<Book> actual = librarian.getAllBooksOfReader(john);
+        Set<Book> expected = new HashSet<>(Arrays.asList(book1, book2));
+        assertTrue(expected.containsAll(actual) && actual.containsAll(expected));
+    }
+
+    @Test
+    @DisplayName("should return empty list if reader has no books")
+    void getAllBooksOfReader2() {
+        Library.Librarian librarian = library.getLibrarian();
+        Set<Book> books = librarian.getAllBooksOfReader(john);
+        assertTrue(books.isEmpty());
+    }
+
+    @Test
+    @DisplayName("should return null if the reader is not registered")
+    void getAllBooksOfReader3() {
+        BookReader heisenberg = new BookReader("Heisenberg");
+        Library.Librarian librarian = library.getLibrarian();
+        Set<Book> books = librarian.getAllBooksOfReader(heisenberg);
+        assertNull(books);
+    }
+
+    @Test
+    @DisplayName("should add the book to library")
+    void addBookToLibrary(){
+        Book mazeRunner = new Book("MazeRunner", 1234571L);
+        Library.Librarian librarian = library.getLibrarian();
+        librarian.addBookToLibrary(mazeRunner);
+
+        Set<Book> actual = library.getBooks();
+        Set<Book> expected = new HashSet<>(Arrays.asList(book1, book2, book3, mazeRunner));
+        assertTrue(expected.containsAll(actual) && actual.containsAll(expected));
+    }
+
+    @Test
+    @DisplayName("should remove the book form the main list")
+    void removeBookFromLibrary(){
+        Library.Librarian librarian = library.getLibrarian();
+        librarian.removeBookFromLibrary(book1);
+
+        Set<Book> actual = library.getBooks();
+        Set<Book> expected = new HashSet<>(Arrays.asList(book2, book3));
+        assertTrue(expected.containsAll(actual) && actual.containsAll(expected));
+    }
+
+    @Test
+    @DisplayName("should add the book to list of removed books")
+    void removeBookFromLibrary2(){
+        Library.Librarian librarian = library.getLibrarian();
+        librarian.removeBookFromLibrary(book1);
+
+        Set<Book> actual = library.getRemovedBooks();
+        Set<Book> expected = new HashSet<>(Arrays.asList(book1));
+        assertTrue(expected.containsAll(actual) && actual.containsAll(expected));
     }
 
 
