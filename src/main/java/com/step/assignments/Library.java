@@ -18,7 +18,9 @@ public class Library {
         this.books.addAll(books);
         this.bookReaders.addAll(bookReaders);
         registerAllReaders(bookReaders);
+        registerAllBooks(books);
     }
+
 
     //library should have methods like
     //getCurrentReaderOf book should access bookRegister
@@ -26,6 +28,18 @@ public class Library {
 
 
     /* ============= Internal Methods ============== */
+
+
+    private void registerAllBooks(Set<Book> books) {
+        for (Book book : books) {
+            this.entryNewBook(book);
+        }
+    }
+
+    private void entryNewBook(Book book) {
+        this.bookRegister.put(book, null);
+    }
+
 
     private void registerAllReaders(Set<BookReader> bookReaders) {
         for (BookReader bookReader : bookReaders) {
@@ -43,6 +57,7 @@ public class Library {
 
     private void addNewBook(Book newBook) {
         this.books.add(newBook);
+        this.bookRegister.put(newBook, null);
     }
 
     private void removeBook(Book book) {
@@ -59,6 +74,10 @@ public class Library {
         booksOfReader.add(book);
     }
 
+    private void addReaderInBookRegister(Book book, BookReader reader) {
+        this.bookRegister.put(book, reader);
+    }
+
     private void removePermanently(Book book) {
         this.removedBooks.remove(book);
     }
@@ -72,14 +91,20 @@ public class Library {
         this.readersRegister.put(reader, new HashSet<>());
     }
 
+    private Map<Book, BookReader> getBookRegister() {
+        return this.bookRegister;
+    }
+
     /* ========= Methods For Reader ========== */
 
 
     public void giveBookToReader(BookReader reader, Book book) {
         this.books.remove(book);
         addBookInReadersRegister(reader, book);
+        addReaderInBookRegister(book, reader);
         reader.borrowBook(book);
     }
+
 
     public void takeBookFromReader(BookReader reader, Book book) {
         reader.returnBook(book);
@@ -130,6 +155,7 @@ public class Library {
         return new Librarian();
     }
 
+
     /* =========== Librarian =========== */
 
 
@@ -139,17 +165,14 @@ public class Library {
         }
 
         public BookReader getCurrentReaderOf(Book book) {
-            for (BookReader reader : getBookReaders()) {
-                if (reader.hasBorrowed(book)) {
-                    return reader;
-                }
-            }
-            return null;
+            Map<Book, BookReader> bookRegister = getBookRegister();
+            return bookRegister.get(book);
         }
 
         public Set<Book> getAllBooksOfReader(BookReader reader) {
             if (isReaderRegistered(reader)) {
-                return reader.getBorrowedBooks();
+                Map<BookReader, Set<Book>> readersRegister = getReadersRegister();
+                return readersRegister.get(reader);
             }
             return null;
         }
