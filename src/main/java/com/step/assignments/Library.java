@@ -10,7 +10,6 @@ public class Library {
     private final Set<BookReader> bookReaders = new HashSet<>();
     private final Set<Book> removedBooks = new HashSet<>();
 
-    //BookReader and Books are stored as a Key value pair
     private final Map<BookReader, Set<Book>> readersRegister = new HashMap<>();
     private final Map<Book, BookReader> bookRegister = new HashMap<>();
 
@@ -20,11 +19,6 @@ public class Library {
         registerAllReaders(bookReaders);
         registerAllBooks(books);
     }
-
-
-    //library should have methods like
-    //getCurrentReaderOf book should access bookRegister
-    //getAllBooksOfReader should access readersRegister
 
 
     /* ============= Internal Methods ============== */
@@ -39,7 +33,6 @@ public class Library {
     private void entryNewBook(Book book) {
         this.bookRegister.put(book, null);
     }
-
 
     private void registerAllReaders(Set<BookReader> bookReaders) {
         for (BookReader bookReader : bookReaders) {
@@ -95,6 +88,11 @@ public class Library {
         return this.bookRegister;
     }
 
+    private boolean isReaderRegistered(BookReader reader) {
+        return this.bookReaders.contains(reader);
+    }
+
+
     /* ========= Methods For Reader ========== */
 
 
@@ -104,7 +102,6 @@ public class Library {
         addReaderInBookRegister(book, reader);
         reader.borrowBook(book);
     }
-
 
     public void takeBookFromReader(BookReader reader, Book book) {
         reader.returnBook(book);
@@ -177,14 +174,14 @@ public class Library {
             return null;
         }
 
-        public void bringBack(Book book) {
-            if (wasBookRemoved(book)) {
-                removePermanently(book);
-                addNewBook(book);
-                return;
-            }
-            System.out.println("Book does not exist in removed list");
-        }
+//        public void bringBack(Book book) {
+//            if (wasBookRemoved(book)) {
+//                removePermanently(book);
+//                addNewBook(book);
+//                return;
+//            }
+//            System.out.println("Book does not exist in removed list");
+//        }
 
         public void addBookToLibrary(Book book) {
             addNewBook(book);
@@ -193,9 +190,5 @@ public class Library {
         public void removeBookFromLibrary(Book book) {
             removeBook(book);
         }
-    }
-
-    private boolean isReaderRegistered(BookReader reader) {
-        return this.bookReaders.contains(reader);
     }
 }

@@ -25,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/step/assignments/Library.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="175" column="43" selection-start-line="175" selection-start-column="43" selection-end-line="175" selection-end-column="43" />
+            <state relative-caret-position="392">
+              <caret line="174" column="9" lean-forward="true" selection-start-line="174" selection-start-column="9" selection-end-line="174" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1175#1176#0" expanded="true" />
@@ -38,36 +38,35 @@
                 <element signature="e#2247#2248#0" expanded="true" />
                 <element signature="e#2298#2299#0" expanded="true" />
                 <element signature="method#removeBookFromReadersRegister#0;class#Library#0" />
-                <element signature="e#2705#2706#0" expanded="true" />
+                <element signature="e#2493#2494#0" expanded="true" />
                 <element signature="e#2319#2320#0" expanded="true" />
                 <element signature="e#2354#2355#0" expanded="true" />
+                <element signature="e#2863#2864#0" expanded="true" />
+                <element signature="e#2919#2920#0" expanded="true" />
                 <element signature="method#takeBookFromReader#0;class#Library#0" />
                 <element signature="method#getBookByName#0;class#Library#0" />
                 <element signature="e#2283#2332#1" />
-                <element signature="e#3629#3630#0" expanded="true" />
+                <element signature="e#3533#3534#0" expanded="true" />
                 <element signature="method#addReader#0;class#Library#0" />
                 <element signature="e#2470#2525#1" />
-                <element signature="e#3862#3863#0" expanded="true" />
+                <element signature="e#3766#3767#0" expanded="true" />
                 <element signature="method#getBooksOfReader#0;class#Library#0" />
                 <element signature="n#!!block;n#getLibrarian#0;n#Library#0" />
-                <element signature="e#4319#4320#0" expanded="true" />
+                <element signature="e#4223#4224#0" expanded="true" />
                 <element signature="e#3852#3853#0" expanded="true" />
                 <element signature="e#3915#3916#0" expanded="true" />
-                <element signature="method#bringBack#0;class#Librarian#0;class#Library#0" />
                 <element signature="e#4730#4731#0" expanded="true" />
                 <element signature="e#4770#4771#0" expanded="true" />
-                <element signature="e#5416#5417#0" expanded="true" />
-                <element signature="e#4910#4911#0" expanded="true" />
-                <element signature="e#4966#4967#0" expanded="true" />
+                <element signature="e#5372#5373#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/step/assignments/LibraryTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
+            <state relative-caret-position="158">
               <caret line="148" column="28" selection-start-line="148" selection-start-column="28" selection-end-line="148" selection-end-column="28" />
               <folding>
                 <element signature="method#giveBookToReader#1;class#LibraryTest#0" />
@@ -207,7 +206,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552676201933" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552709163511" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -341,12 +340,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LibraryTest_wasBookRemoved - 2019.03.15 at 23h 58m 20s.xml">
-      <configuration name="LibraryTest.wasBookRemoved" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LibraryTest_wasBookRemoved2 - 2019.03.15 at 23h 59m 32s.xml">
-      <configuration name="LibraryTest.wasBookRemoved2" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="LibraryTest_wasBookRemoved2 - 2019.03.15 at 23h 59m 42s.xml">
       <configuration name="LibraryTest.wasBookRemoved2" configurationId="JUnit" />
     </history-entry>
@@ -371,6 +364,12 @@
     <history-entry file="LibraryTest_getAllBooksOfReader2 - 2019.03.16 at 00h 24m 29s.xml">
       <configuration name="LibraryTest.getAllBooksOfReader2" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="LibraryTest_getAllBooksOfReader2 - 2019.03.16 at 00h 25m 02s.xml">
+      <configuration name="LibraryTest.getAllBooksOfReader2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="com_step_assignments_in_library-simulation_test - 2019.03.16 at 00h 26m 44s.xml">
+      <configuration name="com.step.assignments in library-simulation.test" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="0" />
@@ -385,7 +384,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32656023" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32656023" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -480,10 +479,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/step/assignments/LibraryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="148" column="28" selection-start-line="148" selection-start-column="28" selection-end-line="148" selection-end-column="28" />
+          <folding>
+            <element signature="method#giveBookToReader#1;class#LibraryTest#0" />
+            <element signature="e#2257#2262#0" />
+            <element signature="method#takeBookFromReader#0;class#LibraryTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/step/assignments/Library.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="175" column="43" selection-start-line="175" selection-start-column="43" selection-end-line="175" selection-end-column="43" />
+        <state relative-caret-position="392">
+          <caret line="174" column="9" lean-forward="true" selection-start-line="174" selection-start-column="9" selection-end-line="174" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1175#1176#0" expanded="true" />
@@ -492,39 +503,26 @@
             <element signature="e#2247#2248#0" expanded="true" />
             <element signature="e#2298#2299#0" expanded="true" />
             <element signature="method#removeBookFromReadersRegister#0;class#Library#0" />
-            <element signature="e#2705#2706#0" expanded="true" />
+            <element signature="e#2493#2494#0" expanded="true" />
             <element signature="e#2319#2320#0" expanded="true" />
             <element signature="e#2354#2355#0" expanded="true" />
+            <element signature="e#2863#2864#0" expanded="true" />
+            <element signature="e#2919#2920#0" expanded="true" />
             <element signature="method#takeBookFromReader#0;class#Library#0" />
             <element signature="method#getBookByName#0;class#Library#0" />
             <element signature="e#2283#2332#1" />
-            <element signature="e#3629#3630#0" expanded="true" />
+            <element signature="e#3533#3534#0" expanded="true" />
             <element signature="method#addReader#0;class#Library#0" />
             <element signature="e#2470#2525#1" />
-            <element signature="e#3862#3863#0" expanded="true" />
+            <element signature="e#3766#3767#0" expanded="true" />
             <element signature="method#getBooksOfReader#0;class#Library#0" />
             <element signature="n#!!block;n#getLibrarian#0;n#Library#0" />
-            <element signature="e#4319#4320#0" expanded="true" />
+            <element signature="e#4223#4224#0" expanded="true" />
             <element signature="e#3852#3853#0" expanded="true" />
             <element signature="e#3915#3916#0" expanded="true" />
-            <element signature="method#bringBack#0;class#Librarian#0;class#Library#0" />
             <element signature="e#4730#4731#0" expanded="true" />
             <element signature="e#4770#4771#0" expanded="true" />
-            <element signature="e#5416#5417#0" expanded="true" />
-            <element signature="e#4910#4911#0" expanded="true" />
-            <element signature="e#4966#4967#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/step/assignments/LibraryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="148" column="28" selection-start-line="148" selection-start-column="28" selection-end-line="148" selection-end-column="28" />
-          <folding>
-            <element signature="method#giveBookToReader#1;class#LibraryTest#0" />
-            <element signature="e#2257#2262#0" />
-            <element signature="method#takeBookFromReader#0;class#LibraryTest#0" />
+            <element signature="e#5372#5373#0" expanded="true" />
           </folding>
         </state>
       </provider>
