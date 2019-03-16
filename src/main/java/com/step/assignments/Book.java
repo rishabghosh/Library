@@ -9,6 +9,11 @@ public class Book {
         this.id = id;
     }
 
+    public Book(String name){
+        this.name = name;
+        this.id = (long) Math.random();
+    }
+
     public String getName() {
         return this.name;
     }

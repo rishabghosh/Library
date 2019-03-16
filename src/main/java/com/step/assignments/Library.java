@@ -20,6 +20,33 @@ public class Library {
         registerAllBooks(books);
     }
 
+    public Library() {
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Library -- \n %s ", this.formatReadersRegister());
+    }
+
+    private String formatReadersRegister() {
+        String details = "";
+
+        details += "Readers ------ ";
+        for (BookReader reader : this.bookReaders) {
+            details += reader.getName();
+            details += " ,";
+        }
+
+
+
+        details += "\nBooks ------";
+        for (Book book: this.bookRegister.keySet()) {
+            details += book.getName();
+            details += " ,";
+        }
+
+        return details;
+    }
 
     /* ============= Internal Methods ============== */
 
@@ -191,4 +218,5 @@ public class Library {
             removeBook(book);
         }
     }
+
 }
