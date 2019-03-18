@@ -38,9 +38,8 @@ public class Library {
         }
 
 
-
         details += "\nBooks ------";
-        for (Book book: this.bookRegister.keySet()) {
+        for (Book book : this.bookRegister.keySet()) {
             details += book.getName();
             details += " ,";
         }
@@ -81,12 +80,12 @@ public class Library {
     }
 
     private void removeBook(Book book) {
-        if (hasBook(book)) {
-            this.books.remove(book);
-            this.removedBooks.add(book);
+        if (!hasBook(book)) {
+            System.out.printf("Book %s does not exist", book.getName());
             return;
         }
-        System.out.printf("Book %s does not exist", book.getName());
+        this.books.remove(book);
+        this.removedBooks.add(book);
     }
 
     private void addBookInReadersRegister(BookReader reader, Book book) {
@@ -161,6 +160,8 @@ public class Library {
     public Set<BookReader> getBookReaders() {
         return new HashSet<>(this.bookReaders);
     }
+
+
 
     public Set<Book> getRemovedBooks() {
         return new HashSet<>(this.removedBooks);
